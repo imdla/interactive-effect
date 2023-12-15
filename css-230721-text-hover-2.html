@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-hover</title>
+    <style>
+        @font-face {
+        font-family: 'EF_jejudoldam';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #007cff;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        main {
+            transition: all 0.5s;
+            -webkit-text-stroke: 4px #FFf;
+            font-variation-settings: "wght" 900, "ital" 1;
+            font-size: 10rem;
+            text-align: center;
+            color: transparent;
+            font-family: 'EF_jejudoldam';
+            text-shadow: 10px 10px 0px #FF6B00,
+            15px 15px 0px rgb(236, 113, 25),
+            20px 20px 0px #cc661e,
+            25px 25px 0px #b6672e,
+            45px 45px 10px #38271b;
+            cursor: pointer;
+        }
+
+        main:hover {
+            font-variation-settings: "wght" 100, "ital" 0;
+            text-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <main>줒제주도<br/>가자젳</main>
+</body>
+</html>
