@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/* common */
+:root {
+    --card-height: 300px;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/s_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* card */
+.card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    /* 원근감 부여 */
+    margin: 0 50px;
+}
+
+/* card - wrapper - cover-image */
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 종횡비 유지, 이미지 크기 맞게 잘림 */
+}
+
+/* card - wrapper */
+.wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.card:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(28deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(45, 105, 148, 0.6);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(45, 105, 148, 0.6);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(45, 105, 148, 0.6);
+}
+
+/* card -wrapper::after, ::before */
+.wrapper::before,
+.wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+}
+
+.wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(to top,
+            transparent 46%,
+            rgba(71, 182, 225, 0.5) 68%,
+            rgba(71, 182, 225, 0.5) 97%);
+}
+
+.wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(to bottom,
+            transparent 46%,
+            rgba(145, 175, 125, 0.5) 68%,
+            rgba(145, 175, 125) 97%);
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+    opacity: 1;
+}
+
+.card:hover .wrapper::after {
+    height: 120px;
+}
+
+/* card - title */
+.title {
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+.card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+}
+
+a:first-child .title {
+    transform: rotate(-10deg);
+}
+
+/* card - character */
+.character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+}
+
+a:nth-child(2) .character {
+    width: 150%;
+}
+
+a:nth-child(3) .character {
+    width: 120%;
+}
+
+.card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+}
