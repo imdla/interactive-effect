@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #fcfcfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg {
+    width: 800px;
+    height: 800px;
+    margin-top: 30px;
+    background-image: url('img/walk-man-bj.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    width: 300px;
+    height: 150px;
+    background-image: url(img/The_Beatles_logo.svg.png);
+    background-size: 100%;
+}
+
+.man {
+    width: 200px;
+    height: 360px;
+    margin-top: 40px;
+    position: absolute;
+    top: 300px;
+    left: 200px;
+}
+
+.man2 {
+    width: 200px;
+    height: 360px;
+    margin-top: 40px;
+    position: absolute;
+    top: 300px;
+    left: 400px;
+}
+
+.man3 {
+    width: 200px;
+    height: 360px;
+    margin-top: 40px;
+    position: absolute;
+    top: 300px;
+    left: 600px;
+}
+
+.head {
+    width: 70px;
+    height: 70px;
+    margin-left: -50px;
+    background-color: #222;
+    border-radius: 50%;
+    -webkit-animation-name: body;
+    animation-name: body;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.body {
+    width: 58px;
+    height: 144px;
+    margin-top: 10px;
+    background-color: #222;
+    border-radius: 50% 50% 0 0;
+    -webkit-transform: skewX(-2deg);
+    transform: skewX(-2deg);
+    position: relative;
+    left: -50px;
+    -webkit-animation-name: body;
+    animation-name: body;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.foot {
+    width: 40px;
+    height: 14px;
+    border-radius: 10px 80% 4px 4px;
+    -webkit-transform: skewX(5deg);
+    transform: skewX(5deg);
+    background-color: #222;
+    display: inline-block;
+    -webkit-animation-name: foot;
+    animation-name: foot;
+    -webkit-animation-duration: 1.8s;
+    animation-duration: 1.8s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.foot:last-child {
+    margin-left: -40px;
+    -webkit-animation-delay: .9s;
+    animation-delay: .9s;
+}
+
+.feet {
+    text-align: left;
+    position: relative;
+    top: 100px;
+    left: -66px;
+}
+
+.feet:before {
+    width: 120px;
+    height: 8px;
+    border-radius: 50%;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: -2px;
+    left: -16px;
+    -webkit-animation-name: shadow;
+    animation-name: shadow;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    /* animation: shadow 3s infinite ease-in-out; */
+}
+
+
+
+@-webkit-keyframes foot {
+    20% {
+        -webkit-transform: translate3d(50px, -16px, 0) rotate(4deg);
+        transform: translate3d(50px, -16px, 0) rotate(4deg);
+    }
+
+    26% {
+        -webkit-transform: translate3d(34px, -10px, 4) rotate(0deg);
+        transform: translate3d(34px, -10px, 4) rotate(0deg);
+    }
+
+    40% {
+        -webkit-transform: translate3d(80px, -6px, 0) rotate(-6deg);
+        transform: translate3d(80px, -6px, 0) rotate(-6deg);
+    }
+
+    44% {
+        -webkit-transform: translate3d(56px, 0, 0) rotate(0deg);
+        transform: translate3d(56px, 0, 0) rotate(0deg);
+    }
+}
+
+@keyframes foot {
+    20% {
+        -webkit-transform: translate3d(34px, -16px, 0) rotate(4deg);
+        transform: translate3d(34px, -16px, 0) rotate(4deg);
+    }
+
+    26% {
+        -webkit-transform: translate3d(34px, -10px, 4) rotate(0deg);
+        transform: translate3d(34px, -10px, 4) rotate(0deg);
+    }
+
+    40% {
+        -webkit-transform: translate3d(56px, -6px, 0) rotate(-6deg);
+        transform: translate3d(56px, -6px, 0) rotate(-6deg);
+    }
+
+    44% {
+        -webkit-transform: translate3d(56px, 0, 0) rotate(0deg);
+        transform: translate3d(56px, 0, 0) rotate(0deg);
+    }
+}
+
+@-webkit-keyframes body {
+    20% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+
+    50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    75% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+}
+
+@keyframes body {
+    20% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+
+    50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    75% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+}
+
+@-webkit-keyframes shadow {
+    20% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    75% {
+        -webkit-transform: scale(0.96);
+        transform: scale(0.96);
+    }
+}
+
+@keyframes shadow {
+    20% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    75% {
+        -webkit-transform: scale(0.96);
+        transform: scale(0.96);
+    }
+}
