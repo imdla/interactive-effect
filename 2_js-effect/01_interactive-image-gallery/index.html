@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interactive-image-gallery</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Image Gallery</h1>
+
+    <div class="gallery">
+        <img src="https://assets.codepen.io/210284/flower-6.jpg" alt="Image 1" />
+        <img src="https://assets.codepen.io/210284/flower-7.jpg" alt="Image 2" />
+        <img src="https://assets.codepen.io/210284/flower-8.jpg" alt="Image 3" />
+        <img src="https://assets.codepen.io/210284/flower-9.jpg" alt="Image 4" />
+    </div>
+
+    <div id="lightbox">
+        <span id="close-btn">&times;</span>
+        <img id="lightbox-img" src="" alt="lightbox image" />
+        <div id="thumbnail-container">
+            <!-- <img src="https://assets.codepen.io/210284/flower-6.jpg" alt="Thumbnail 1" class="thumbnail active-thumbnail" />
+            <img src="https://assets.codepen.io/210284/flower-7.jpg" alt="Thumbnail 2" class="thumbnail" />
+            <img src="https://assets.codepen.io/210284/flower-8.jpg" alt="Thumbnail 3" class="thumbnail" />
+            <img src="https://assets.codepen.io/210284/flower-9.jpg" alt="Thumbnail 4" class="thumbnail" /> -->
+        </div>
+        <button id="prev-btn">&lt; Prev</button>
+        <button id="next-btn">Next &gt;</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
