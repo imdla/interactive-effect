@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal with html css javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="btn-group">
+        <button type="button" class="open-modal" data-open="modal1">
+            Launch first modal with a slide animation
+        </button>
+        <button type="button" class="open-modal" data-open="modal2">
+            Launch second modal with a bunch of animations
+        </button>
+    </div>
+
+    <div class="modal" id="modal1" data-animation="slideInOutLeft">
+        <div class="modal-dialog">
+            <header class="modal-header">
+                The header of the first modal
+                <button class="close-modal" aria-label="close-modal" data-close>
+                    X
+                </button>
+            </header>
+            <section class="modal-content">
+                <p><strong>Press X, ESC, or click outside of the modal to close it</strong></p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+                <p>1500s, when an unknown printer took a galley of type and scrambled it</p>
+                <p>to make a type specimen book. It has survived not only five centuries,</p>
+                <p>but also the leap into electronic typesetting, remaining essentially</p>
+                <p>unchanged. It was popularised in the 1960s with the release of Letraset</p>
+                <p>sheets containing Lorem Ipsum passages, and more recently with desktop</p>
+                <p>publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+                <p>1500s, when an unknown printer took a galley of type and scrambled it</p>
+                <p>to make a type specimen book. It has survived not only five centuries,</p>
+                <p>but also the leap into electronic typesetting, remaining essentially</p>
+                <p>unchanged. It was popularised in the 1960s with the release of Letraset</p>
+                <p>sheets containing Lorem Ipsum passages, and more recently with desktop</p>
+                <p>publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </section>
+            <footer class="modal-footer">
+                The footer of the first modal
+            </footer>
+        </div>
+    </div>
+
+    <div class="modal" id="modal2" data-animation="mixInAnimations">
+        <div class="modal-dialog">
+            <header class="modal-header">
+                The header of the first modal
+                <button class="close-modal" aria-label="close-modal" data-close>
+                    X
+                </button>
+            </header>
+            <section class="modal-content">
+                <p><strong>Press X, ESC, or click outside of the modal to close it</strong></p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+                <p>1500s, when an unknown printer took a galley of type and scrambled it</p>
+                <p>to make a type specimen book. It has survived not only five centuries,</p>
+                <p>but also the leap into electronic typesetting, remaining essentially</p>
+                <p>unchanged. It was popularised in the 1960s with the release of Letraset</p>
+                <p>sheets containing Lorem Ipsum passages, and more recently with desktop</p>
+                <p>publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </section>
+            <footer class="modal-footer">
+                The footer of the second modal
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
