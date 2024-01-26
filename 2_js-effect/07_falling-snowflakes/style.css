@@ -1,0 +1,52 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Pacifico", cursive;
+    height: 100vh;
+    background: linear-gradient(#2d91c2, #1e528e);
+}
+
+main h1 {
+    color: #fff;
+}
+
+#snow-container {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    width: 100%;
+    transition: opacity 0.5s;
+    overflow: hidden;
+}
+
+.snow {
+    position: absolute;
+    color: skyblue;
+    animation: fall ease-in infinite, sway ease-in-out infinite;
+}
+
+@keyframes fall {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {top: 100vh;}
+}
+
+@keyframes sway {
+    0% {margin-left: 0;}
+    25% {margin-left: 50px;}
+    50% {margin-left: -50px;}
+    75% {margin-left: 50px;}
+    100% {margin-left: 0;}
+}
