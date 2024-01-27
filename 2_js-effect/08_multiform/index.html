@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tab-status">
+            <span class="tab active">1</span>
+            <span class="tab">2</span>
+            <span class="tab">3</span>
+        </div>
+        <form action="#">
+            <div role="tab-list">
+                <div role="tabpanel" class="tabpanel">
+                    <h3><label for="color">가장 좋아하는 색상은 무엇인가요?</label></h3>
+                    <textarea name="color" id="color" cols="30" rows="10" class="form-input" placeholder="파란색"></textarea>
+                </div>
+                <div role="tabpanel" class="tabpanel hidden">
+                    <h3><label for="interest">취미는 무엇인가요?</label></h3>
+                    <textarea name="interest" id="interest" cols="30" rows="10" class="form-input" placeholder="독서, 운동, 게임"></textarea>
+                </div>
+                <div role="tabpanel" class="tabpanel hidden">
+                    <h3><label for="occupation">직업은 무엇인가요?</label></h3>
+                    <textarea name="occupation" id="occupation" cols="30" rows="10" class="form-input" placeholder="웹 디자이너"></textarea>
+                </div>
+            </div>
+            <div class="pagination">
+                <button type="button" class="btn hidden" id="prev">Previous</button>
+                <button type="button" class="btn" id="next">Next</button>
+                <button type="submit" class="btn btn-submit hidden" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
