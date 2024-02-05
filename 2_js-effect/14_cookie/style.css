@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.popup {
+    position: fixed;
+    left: 100px;
+    top: 100px;
+    border: 1px solid #ebebeb;
+    padding: 40px 60px;
+    /* display: none; */
+}
